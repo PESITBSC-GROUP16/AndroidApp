@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.graphics.PorterDuff;
+import android.content.Intent;
 
 import org.w3c.dom.Text;
 
@@ -29,6 +30,7 @@ public class Checker extends AppCompatActivity {
         setTitle("Dashboard");
 
         final String s = getIntent().getStringExtra("device_id");
+        final String i = getIntent().getStringExtra("Image");
         t6 = (TextView) findViewById(R.id.device);
         t6.setText(s);
 
@@ -116,7 +118,10 @@ public class Checker extends AppCompatActivity {
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("You clicked card 1");
+                Intent in = new Intent(Checker.this, ImageActivity.class);
+                in.putExtra("Image",i);
+                System.out.println("Sending string: " + i);
+                startActivity(in);
             }
         });
 

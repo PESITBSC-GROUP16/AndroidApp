@@ -94,6 +94,7 @@ public class MainActivity extends Activity {
                                     in.putExtra("WaveHeight_th", arr[7]);
                                     in.putExtra("WavePeriod_th", arr[8]);
                                     in.putExtra("BatteryLife_th", arr[9]);
+                                    in.putExtra("Image",String.valueOf(tokenize.get("image")));
                                     startActivity(in);
                                 }
                                 catch (JSONException e) {

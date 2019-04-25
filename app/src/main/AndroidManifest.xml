@@ -22,6 +22,10 @@
             android:name=".Checker"
             android:label="Checker"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".ImageActivity"
+            android:label="ImageActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
