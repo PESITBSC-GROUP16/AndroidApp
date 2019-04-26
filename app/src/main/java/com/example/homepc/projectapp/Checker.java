@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.graphics.PorterDuff;
@@ -17,6 +18,7 @@ public class Checker extends AppCompatActivity {
     TextView t1,t2,t3,t4,t5,t6;
     ProgressBar p1,p2,p3,p4,p5;
     CardView c1,c2,c3,c4,c5;
+    Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +117,9 @@ public class Checker extends AppCompatActivity {
             p5.getProgressDrawable().setColorFilter(Color.parseColor("#E10A00"), PorterDuff.Mode.SRC_IN);
         }
 
-        c1.setOnClickListener(new View.OnClickListener() {
+        b1 = (Button) findViewById(R.id.visualize);
+
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(Checker.this, ImageActivity.class);
